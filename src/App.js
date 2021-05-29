@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TodoList from "./components/TodoList/TodoList";
 import "./App.css";
 import Form from "./components/Form/Form";
-
+import TodoHeader from "./components/TodoHeader/TodoHeader";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -50,6 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <TodoHeader/>
         <Form
           userInput={this.state.userInput}
           onInputChange={this.onInputChange}
