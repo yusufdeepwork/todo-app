@@ -1,0 +1,7 @@
+.deleteButton{
+ float: right;
+    width: 3vw;
+    height: 1.5vw;
+    background: #feb344;
+    cursor: pointer;
+}

@@ -11,7 +11,12 @@ class App extends Component {
       todos: [],
     };
   }
-
+  deleteItem = (id) => {
+    console.log(this.state.todos.filter(item => item.id !== id) ," id ")
+    this.setState({
+      todos : this.state.todos.filter(item => item.id !== id)
+    })
+  }
   // Eğer input alanı boş değilse todos'a ekleye
   addItem = () => {
     // input'ta yazılı olan string değer
@@ -58,7 +63,7 @@ class App extends Component {
         />
         {this.state.todos.length > 0 && (
           <div className="list">
-            <TodoList todos={this.state.todos} />
+            <TodoList todos={this.state.todos} deleteItem={this.deleteItem} />
           </div>
         )}
       </div>
